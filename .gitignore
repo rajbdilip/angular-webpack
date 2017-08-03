@@ -53,3 +53,7 @@ __build__/**
 # IDE #
 .idea/
 *.swp
+
+# IDE - Eclipse/Angular IDE #
+.project
+.settings/
