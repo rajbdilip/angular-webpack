@@ -1,0 +1,55 @@
+/*
+These are layout styles specific to the styleguide.
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  thead {
+    border-bottom: 2px solid $dbsred;
+  }
+  th, td {
+    padding: 8px;
+    line-height: 1.125;
+    border-bottom: $border-style;
+  }
+  td {
+    border-right: $border-style;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  th {
+    font-size: em(18);
+    font-weight: normal;
+    color: $storm;
+    text-align: left;
+  }
+  tfoot {
+    th, td {
+      padding: 0;
+      border: none;
+    }
+  }
+  .table-pagination {
+    @include clearfix;
+  }
+}
+nav.pagination {
+  padding: 8px;
+  float: left;
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 5px;
+    list-style: none;
+    &.active a {
+      background: $canvas;
+      font-weight: $font-weight-bold;
+    }
+    a {
+      display: inline-block;
+      padding: 4px 6px;
+    }
+  }
+}

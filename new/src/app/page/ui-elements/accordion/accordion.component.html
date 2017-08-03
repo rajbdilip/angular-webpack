@@ -1,0 +1,43 @@
+<h1>Accordion</h1>
+
+<h2>Default Dynamic Acccordion</h2>
+
+<accordion-component [closeOthers]="oneAtATime">
+  <accordion-group *ngFor="let group of groups" [heading]="group?.title">
+    {{ group?.content }}
+  </accordion-group>
+</accordion-component>
+
+<code>
+  <strong>HTML:</strong><br>
+  &lt;accordion-component [closeOthers]="oneAtATime"&gt;<br>
+  &nbsp; &nbsp; &lt;accordion-group *ngFor="let group of groups" [heading]="group?.title"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; {{ '{' }}{{ '{' }}group?.content{{ '}' }}{{ '}' }}<br>
+  &nbsp; &nbsp; &lt;/accordion-group&gt;<br>
+  &lt;/accordion-component&gt;
+</code>
+
+<h2>Custom Dynamic Acccordion</h2>
+
+<accordion-component class="custom-accordion" [closeOthers]="oneAtATime">
+  <accordion-group *ngFor="let group of groups" [isCollapsible]="false">
+    <div accordion-heading>
+     <input id="{{ group?.id }}" name="test" value="{{ group?.title }}" type="radio">
+     <label [attr.for]="group?.id">{{ group?.title }}</label>
+    </div>
+    {{ group?.content }}
+  </accordion-group>
+</accordion-component>
+
+<code>
+  <strong>HTML:</strong><br>
+  &lt;accordion-component [closeOthers]=true&gt;<br>
+  &nbsp; &nbsp; &lt;accordion-group *ngFor="let group of groups" [isCollapsible]="false"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="custom-heading" accordion-heading&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id="{{ '{' }}{{ '{' }}group?.id{{ '}' }}{{ '}' }}" name="test" value="{{ '{' }}{{ '{' }}group?.title{{ '}' }}{{ '}' }}" type="radio"&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label [attr.for]="group?.id"&gt;{{ '{' }}{{ '{' }}group?.title{{ '}' }}{{ '}' }} &lt;/label&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; {{ '{' }}{{ '{' }}group?.content{{ '}' }}{{ '}' }}<br>
+  &nbsp; &nbsp; &lt;/accordion-group&gt;<br>
+  &lt;/accordion-component&gt;
+</code>

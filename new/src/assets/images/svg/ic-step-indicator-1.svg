@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <ellipse id="a" cx="10" cy="10" rx="10" ry="10"/>
+    <mask id="b" width="20" height="20" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <use stroke="#000000" stroke-width="2" mask="url(#b)" xlink:href="#a"/>
+    <polygon fill="#000000" points="11.152 15 11.152 5.662 9.43 5.662 6.658 7.678 7.358 9.064 9.164 7.678 9.164 15"/>
+  </g>
+</svg>

@@ -1,0 +1,152 @@
+<h1>Form Elements</h1> 
+  <div>
+  <h3>Data binding</h3>
+    <div>
+    <label>Text Input with data binding:</label>
+      <dbs-input [(ngModel)]="text_value" type="text" class="input-short" placeholder="Enter Text" maxlength="20"></dbs-input> 
+      
+      <br>
+      <br>
+      <code>
+        <strong>HTML:</strong><br>
+        &lt;label&gt;Text Input with data binding:&lt;/label&gt;<br>
+        &lt;dbs-input [(ngModel)]="text_value" type="text" class="input-short" placeholder="Enter Text" maxlength="20"&gt;&lt;/dbs-input&gt;
+      </code> 
+         </div>
+    <div>
+      <label>Password:</label>
+      <dbs-input required [(ngModel)]="text_value1" type="password" required #password class="input-normal" maxlength="50" placeholder="Password" errorMsg="Enter a valid password"></dbs-input>
+      <small [hidden]="password.valid || (password.pristine && !f.submitted)">
+        Password is required
+    </small>
+      <br>
+      <br> -->
+    </div>
+    <br>
+    <h3>Email validation</h3>
+    <div>
+      <label>Email Input:</label>
+      <dbs-input required [(ngModel)]="email_value" type="email" class="input-normal" maxlength="50" placeholder="Enter Email" errorMsg="Enter a valid email"></dbs-input>
+      <br>
+      <br>
+      <code>
+        <strong>HTML:</strong><br>
+        &lt;label&gt;Email Input:&lt;/label&gt;<br>
+        &lt;dbs-input required [(ngModel)]="email_value" type="email" class="input-normal" placeholder="Enter Email" errorMsg="Enter a valid email"&gt;&lt;/dbs-input&gt;
+      </code>
+    </div>
+    <br>
+    <h3>Numbers only</h3>
+    <div>
+      <label>Number Input:</label>
+      <dbs-input [(ngModel)]="number_value" type="tel" class="input-short" placeholder="Enter Number"></dbs-input>
+      <br>
+      <br>
+      <code>
+        <strong>HTML:</strong><br>
+        &lt;label&gt;Number Input:&lt;/label&gt;<br>
+        &lt;dbs-input [(ngModel)]="number_value" type="tel" class="input-short" placeholder="Enter Number"&gt;&lt;/dbs-input&gt;
+      </code>
+    </div>
+  </div>
+  <br>
+  <div>
+    <h3>Required Input</h3>
+      <label>Required Input:</label>
+      <dbs-input required type="text" class="input-long" placeholder="Enter Text"></dbs-input>
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;label&gt;Required Input:&lt;/label&gt;<br>
+      &lt;dbs-input required type="text" class="input-short" placeholder="Enter Text"&gt;&lt;/dbs-input&gt;<br>
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>Auto Complete Input</h3>
+    <label>Auto Complete Input:</label>
+    <auto-complete [(ngModel)]="selectedItem" class="input-long" [searchdata]="cities?.citiesList" [placeholder]="'Select City'"></auto-complete>
+    {{selectedItem?.label}}
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;label&gt;Auto Complete Input:&lt;/label&gt;<br>
+      &lt;auto-complete [(ngModel)]="selectedItem" class="input-long" [searchdata]="cities?.citiesList" [placeholder]="'Select City'"&gt;&lt;/auto-complete&gt;
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>Textarea</h3>
+      <label>Textarea:</label>
+      <dbs-textarea required class="input-normal" maxlength="100" placeholder="Enter Message"></dbs-textarea>
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;label&gt;Textarea:&lt;/label&gt;<br>
+      &lt;dbs-textarea required class="input-normal" maxlength="100" placeholder="Enter Message"&gt;&lt;/dbs-textarea&gt;<br>
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>Checkbox</h3>
+    <input type="checkbox" name="checkbox" id="checkbox1" value="checkbox" checked><label for="checkbox1">This is a checkbox</label><br>
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;input type="checkbox" name="checkbox" value="checkbox" checked&gt;&lt;label for="checkbox"&gt;This is a checkbox&lt;/label&gt;<br>
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>Radio Button</h3>
+    <input id="test1" name="test" class="" type="radio"><label for="test1">Label 1</label>
+    <input id="test2" name="test" class="" type="radio"><label for="test2">Label 2</label>
+    <input id="test3" name="test" class="" type="radio"><label for="test3">Label 3</label>
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;input id="test1" name="test" class="" type="radio"&gt;<br>
+      &lt;label for="test1"&gt;Label 1&lt;/label&gt;<br>
+      &lt;input id="test2" name="test" class="" type="radio"&gt;<br>
+      &lt;label for="test2"&gt;Label 2&lt;/label&gt;<br>
+      &lt;input id="test3" name="test" class="" type="radio"&gt;<br>
+      &lt;label for="test3"&gt;Label 3&lt;/label&gt;<br>
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>Input Button</h3>
+    <input type="button" class="btn btn-dbs-solid" value="Main button">
+    <input type="button" class="btn btn-dbs-line" value="Sub button">
+    <input type="button" class="btn btn-dbs-link" value="Cancel button">
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;input type="button" class="btn btn-dbs-solid" value="Main button"&gt;<br>
+      &lt;input type="button" class="btn btn-dbs-line" value="Sub button"&gt;<br>
+      &lt;input type="button" class="btn btn-dbs-link" value="Cancel button"&gt;<br>
+    </code>
+  </div>
+  <br>
+  <div>
+    <h3>HTML Button</h3>
+      <button class="btn btn-dbs-solid">Main button</button>
+      <button class="btn btn-dbs-line">Sub button</button>
+      <button class="btn btn-dbs-link">Cancel button</button>
+    <br>
+    <br>
+    <code>
+      <strong>HTML:</strong><br>
+      &lt;button class="btn btn-dbs-solid"&gt;Main button&lt;/button&gt;<br>
+      &lt;button class="btn btn-dbs-line"&gt;Sub button&lt;/button&gt;<br>
+      &lt;button class="btn btn-dbs-link"&gt;Cancel button&lt;/button&gt;<br>
+    </code>
+  </div>
+ 
+

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="a" d="M16,5 L18.0092049,5 C19.1086907,5 20,5.88743329 20,6.99961498 L20,13.000385 C20,14.1047419 19.1017876,15 18.0092049,15 L16,15 L16,18.0026083 C16,19.1057373 15.0980496,20 13.9914698,20 L6.0085302,20 C4.8992496,20 4,19.1041422 4,18.0026083 L4,15 L1.99079514,15 C0.891309342,15 0,14.1125667 0,13.000385 L0,6.99961498 C0,5.89525812 0.898212381,5 1.99079514,5 L5,5 L5,1.99791312 C5,0.894496173 5.90017617,0 6.99201702,0 L14.007983,0 C15.1081436,0 16,0.898260623 16,1.99791312 L16,5 Z"/>
+    <mask id="i" width="20" height="20" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <path id="b" d="M6,14.5 C6,14.2238576 6.23079681,14 6.50043583,14 L13.4995642,14 C13.7759472,14 14,14.2319336 14,14.5 C14,14.7761424 13.7692032,15 13.4995642,15 L6.50043583,15 C6.22405275,15 6,14.7680664 6,14.5 Z M6,16.5 C6,16.2238576 6.21484375,16 6.49769878,16 L10.5023012,16 C10.7771727,16 11,16.2319336 11,16.5 C11,16.7761424 10.7851562,17 10.5023012,17 L6.49769878,17 C6.22282734,17 6,16.7680664 6,16.5 Z"/>
+    <mask id="j" width="8" height="3" x="0" y="0" fill="white">
+      <use xlink:href="#b"/>
+    </mask>
+    <rect id="c" width="1" height="4" x="3" y="11"/>
+    <mask id="k" width="1" height="4" x="0" y="0" fill="white">
+      <use xlink:href="#c"/>
+    </mask>
+    <rect id="d" width="12" height="1" x="4" y="11"/>
+    <mask id="l" width="12" height="1" x="0" y="0" fill="white">
+      <use xlink:href="#d"/>
+    </mask>
+    <rect id="e" width="1" height="4" x="16" y="11"/>
+    <mask id="m" width="1" height="4" x="0" y="0" fill="white">
+      <use xlink:href="#e"/>
+    </mask>
+    <rect id="f" width="11" height="1" x="5" y="4"/>
+    <mask id="n" width="11" height="1" x="0" y="0" fill="white">
+      <use xlink:href="#f"/>
+    </mask>
+    <rect id="g" width="1" height="1" x="14" y="7"/>
+    <mask id="o" width="1" height="1" x="0" y="0" fill="white">
+      <use xlink:href="#g"/>
+    </mask>
+    <rect id="h" width="2" height="2" x="16" y="7"/>
+    <mask id="p" width="2" height="2" x="0" y="0" fill="white">
+      <use xlink:href="#h"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke-width="2">
+    <use fill="#FF3333" stroke="#FF3333" mask="url(#i)" xlink:href="#a"/>
+    <use fill="#FF3333" stroke="#FFFFFF" mask="url(#j)" xlink:href="#b"/>
+    <use fill="#FF3333" stroke="#FFFFFF" mask="url(#k)" xlink:href="#c"/>
+    <use fill="#FF3333" stroke="#FFFFFF" mask="url(#l)" xlink:href="#d"/>
+    <use fill="#FF3333" stroke="#FFFFFF" mask="url(#m)" xlink:href="#e"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#n)" xlink:href="#f"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#o)" xlink:href="#g"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#p)" xlink:href="#h"/>
+  </g>
+</svg>

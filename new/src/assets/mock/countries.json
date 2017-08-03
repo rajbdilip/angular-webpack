@@ -1,0 +1,18 @@
+{
+  "countriesList": [
+    {
+      "label": "Singapore"
+    },
+    {
+      "label": "USA"
+    }
+  ],
+  "countryCodes": [
+    {
+      "label": "+65"
+    },
+    {
+      "label": "+84"
+    }
+  ]
+}

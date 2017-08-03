@@ -1,0 +1,220 @@
+<h1>Framework Coding Guidelines</h1>
+<h2>Single Responsibility</h2>
+<ul>
+  <li>
+    <h4>Define one thing (e.g. service or component) per file.</h4>
+    <ul>
+      <li>
+        One component per file makes it far easier to read, maintain, and avoid collisions with teams in source control.
+      </li>
+      <li>
+        One component per file avoids hidden bugs that often arise when combining components in a file where they may share variables, create unwanted closures, or unwanted coupling with dependencies.
+      </li>
+      <li>
+        A single component can be the default export for its file which facilitates lazy loading with the Router.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Define small functions.
+    </h4>
+    <ul>
+      <li>
+        Small functions are easier to test, especially when they do one thing and serve one purpose.
+      </li>
+      <li>
+        Small functions promote reuse.
+      </li>
+      <li>
+        Small functions are easier to read.
+      </li>
+      <li>
+        Small functions are easier to maintain.
+      </li>
+      <li>
+        Small functions help avoid hidden bugs that come with large functions that share variables with external scope, create unwanted closures, or unwanted coupling with dependencies.
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h2>
+Naming
+</h2>
+<ul>
+  <li>
+    <h4>
+    Use consistent names for all symbols.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    Follow a pattern that describes the symbol's feature then its type.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    The recommended pattern is feature.type.ts.
+    </h4>
+    <ul>
+      <li>
+        Naming conventions help provide a consistent way to find content at a glance. Consistency within the project is vital. Consistency with a team is important. Consistency across a company provides tremendous efficiency.
+      </li>
+      <li>
+        The naming conventions should simply help find desited code faster and make it easier to understand.
+      </li>
+      <li>
+        Names of folders and files should clearly convey their intent. For example, app/heroes/hero-list.component.ts may contain a component that manages a list of heroes.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Separate File Names with Dots and Dashes.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    Do use dashes to separate words in the descriptive name.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    Use dots to separate the descriptive name from the type.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    Use consistent type names for all components following a pattern that describes the component's feature then its type. A recommended pattern is feature.type.ts.
+    </h4>
+  </li>
+  <li>
+    <h4>
+    Use conventional type names including .service, .component, .pipe, .module, .directive. Invent additional type names if you must but take care not to create too many.
+    </h4>
+    <ul>
+      <li>
+        Type names provide a consistent way to quickly identify what is in the file.
+      </li>
+      <li>
+        Make it easy to find a specific file type using an editor or IDE's fuzzy search techniques.
+      </li>
+      <li>
+        Unabbreviated type names such as .service are descriptive and unambiguous. Abbreviations such as .srv, .svc, and .serv can be confusing.
+      </li>
+      <li>
+        Provides pattern matching for any automated tasks.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Use lower camel case for naming the selectors of directives
+    </h4>
+    <ul>
+      <li>
+        Keeps the names of the properties defined in the directives that are bound to the view consistent with the attribute names.
+      </li>
+      <li>
+        The Angular HTML parser is case sensitive and will recognize lower camel case.
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h2>
+Coding Conventions
+</h2>
+<ul>
+  <li>
+    <h4>
+    Use upper camel case when naming classes.
+    </h4>
+    <ul>
+      <li>
+        Follows conventional thinking for class names.
+      </li>
+      <li>
+        Classes can be instantiated and construct an instance. By convention, upper camel case indicates a constructable asset.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Declare variables with const if their values should not change during the application lifetime.
+    </h4>
+    <ul>
+      <li>
+        Conveys to readers that the value is invariant.
+      </li>
+      <li>
+        TypeScript helps enforce that intent by requiring immediate initialization and by preventing subsequent re-assignment.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Use lower camel case to name properties and methods.
+    </h4>
+    <ul>
+      <li>
+        Follows conventional thinking for properties and methods.
+      </li>
+      <li>
+        JavaScript lacks a true private property or method.
+      </li>
+      <li>
+        TypeScript tooling makes it easy to identify private vs public properties and methods.
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr>
+<h2>
+Services
+</h2>
+<ul>
+  <li>
+    <h4>
+    Use upper camel case when naming classes.
+    </h4>
+    <ul>
+      <li>
+        Follows conventional thinking for class names.
+      </li>
+      <li>
+        Classes can be instantiated and construct an instance. By convention, upper camel case indicates a constructable asset.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Declare variables with const if their values should not change during the application lifetime.
+    </h4>
+    <ul>
+      <li>
+        Conveys to readers that the value is invariant.
+      </li>
+      <li>
+        TypeScript helps enforce that intent by requiring immediate initialization and by preventing subsequent re-assignment.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4>
+    Use lower camel case to name properties and methods.
+    </h4>
+    <ul>
+      <li>
+        Follows conventional thinking for properties and methods.
+      </li>
+      <li>
+        JavaScript lacks a true private property or method.
+      </li>
+      <li>
+        TypeScript tooling makes it easy to identify private vs public properties and methods.
+      </li>
+    </ul>
+  </li>
+</ul>

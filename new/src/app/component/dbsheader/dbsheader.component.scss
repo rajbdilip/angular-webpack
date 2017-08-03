@@ -1,0 +1,169 @@
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+
+header {
+  @include clearfix;
+  width: 100%;
+  padding: 24px 0;
+  background: $nero;
+  color: $canvas;
+}
+
+header {
+  position: relative;
+}
+.header-wrapper {
+  @include clearfix;
+  min-width: $max-width + px;
+  margin: 0 auto;
+  /*padding: 0 percentage(40/$max-width);*/
+  padding: 0 40px;
+}
+.logout {
+    float: right;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    background-color: $dbsred;
+    button {
+      color: $white;
+      height: 100%;
+    }
+}
+nav {
+  float: left;
+  width: percentage(172 / 320);
+  font-size: em(14);
+  line-height: (26/14);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 20px 0 0;
+    }
+
+    li a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: percentage(88 / 320);
+  margin-right: percentage(20 / 320);
+  float: left;
+  vertical-align: middle;
+}
+
+.nav-icon {
+  display: inline-block;
+  background: url("/images/sprite/template.png") no-repeat top left;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  .dbs-logo {
+    background-position: 0px 0px;
+    width: 88px;
+    height: 26px;
+  }
+
+  .ac-logo {
+    background-position: -98px 0px;
+    width: 39px;
+    height: 39px;
+  }
+
+  .ac-logo-big {
+    background-position: -147px 0px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .mail {
+    background-position: -227px 0px;
+    width: 26px;
+    height: 19px;
+  }
+
+  .search {
+    background-position: -263px 0px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .menu {
+    background-position: -294px 0px;
+    width: 17px;
+    height: 14px;
+  }
+
+  .ico-question {
+    background-position: -321px 0px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .ico-logout {
+    background-position: -346px 0px;
+    width: 20px;
+    height: 16px;
+  }
+
+  .ico_close {
+    background-position: -376px 0px;
+    width: 14px;
+    height: 13px;
+  }
+
+  .dashboard_icon {
+    background-position: -400px 0px;
+    width: 87px;
+    height: 66px;
+  }
+
+  .e_report_icon {
+    background-position: -497px 0px;
+    width: 87px;
+    height: 66px;
+  }
+
+  .calendar_icon {
+    background-position: -594px 0px;
+    width: 87px;
+    height: 66px;
+  }
+
+  .clock {
+    background-position: -691px 0px;
+    width: 65px;
+    height: 66px;
+  }
+}
+
+@include media(600px) {
+  .logo {
+    width: 88px;
+    margin-right: 40px;
+  }
+  nav {
+    width: percentage(432 / 600);
+  }
+}
+@include media(1024px) {
+  nav {
+    width: percentage(816 / 944);
+  }
+}

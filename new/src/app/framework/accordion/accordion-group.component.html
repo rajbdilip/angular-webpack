@@ -1,0 +1,11 @@
+<div class="panel" [ngClass]="panelClass">
+  <div class="panel-heading" (click)="toggleOpen($event)" [ngClass]="{'active-panel': isOpen, 'inactive-panel': !isOpen}" >
+      <span *ngIf="heading" [ngClass]="{'text-muted': isDisabled}">{{heading}}</span>
+      <ng-content select="[accordion-heading]"></ng-content>
+  </div>
+  <div class="panel-collapse collapse" [collapse]="!isOpen">
+    <div class="panel-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

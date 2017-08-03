@@ -1,0 +1,108 @@
+/*
+These are layout styles.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $nero;
+}
+
+.page-container-wrapper {
+  margin: 0 auto;
+  width:  $max-width + px;
+  .page-container {
+    @include clearfix;
+    max-width: $max-width + px;
+    margin: 64px auto;
+    padding: 0 percentage(40/$max-width);
+  }
+}
+.panel-collapse {
+  max-height: 0;
+  height: auto;
+  overflow: hidden;
+  &.in {
+    max-height: 2000px;
+    height: auto;
+  }
+}
+.form-section-header {
+  font-size: 32px;
+}
+ul.progress-bar{
+  list-style: none;
+  width: 100%;
+  font-size: em(16);
+  overflow: auto;
+  padding: 0;
+  li{
+    border-bottom: 1px solid $chrome;
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    padding-bottom: 5px;
+    &.active {
+      font-weight: $font-weight-bold;
+      padding-bottom: 3px;
+      color: $dbsred;
+      border-bottom: 4px solid $dbsred;
+    }
+    &.actived {
+      border-bottom: 1px solid $dbsred;
+      color: $dbsred;
+    }
+  }
+}
+
+.row {
+  @include clearfix;
+  margin-bottom: 16px;
+  .column {
+    margin-right: 16px;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .col-1 {
+    @include span-columns(1);
+  }
+  .col-2 {
+    @include span-columns(2);
+  }
+  .col-3 {
+    @include span-columns(3);
+  }
+  .col-4 {
+    @include span-columns(4);
+  }
+  .col-5 {
+    @include span-columns(5);
+  }
+  .col-6 {
+    @include span-columns(6);
+  }
+  .col-7 {
+    @include span-columns(7);
+  }
+  .col-8 {
+    @include span-columns(8);
+  }
+  .col-9 {
+    @include span-columns(9);
+  }
+  .col-10 {
+    @include span-columns(10);
+  }
+  .col-11 {
+    @include span-columns(11);
+  }
+  .col-12 {
+    @include span-columns(12);
+  }
+}

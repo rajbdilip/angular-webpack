@@ -1,0 +1,48 @@
+/* 
+  tabs.component.scss
+  Output: tabs.component.css
+  This is tabs component to toggle between content.
+*/
+
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+
+.tabs-nav,
+.tabs-content {
+  @include clearfix;
+}
+.tabs-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: $border-style;
+  li {
+    display: inline-block;
+    margin: 0;
+    span {
+      display: inline-block;
+      cursor: pointer;
+      border-top: $border-style;
+      border-left: $border-style;
+      padding: 5px 14px;
+      color: $dbsred;
+    }
+    &:last-child {
+      span {
+        border-right: $border-style;
+      }
+    }
+  }
+  li.active,
+  li:hover {
+    span {
+      background: $dbsred;
+      color: $white;
+    }
+  }
+}
+.tabs-content {
+  padding: 20px 0;
+}

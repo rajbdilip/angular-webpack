@@ -1,0 +1,147 @@
+<h1>Tables</h1>
+<p>Tables are very challenging on mobile platforms due to the very constrained screen real estate (usually no more than 320px). Therefor content authors should strive to avoid tables if possible and layout the information in an alternative way. If this cannot be avoided, there are some rough guidelines around content that goes into tables. Please note that this guidelines are not 100% hard constrains, but should rather serve as a general direction.</p>
+<ul>
+  <li>3 columns recommended, max 4 columns, more will not fit horizontally on a mobile screen</li>
+  <li>1-4 rows recommended, more will introduce a lot of scrolling on mobile devices</li>
+  <li>2-3 words per column header, more will wrap on mobile screen and make for a unpleasant layout</li>
+  <li>1-8 words per table cell content, try to avoid long words to enable mobile devices to wrap properly</li>
+</ul>
+<p>It is highly recommended to test the table layout on mobile devices before deploying for production and check if the full table will be displayed properly.</p>
+<p>We are using ng2-data-table to generate tables.</p>
+<h3>Main Colors</h3>
+<table *ngIf="datalist" class="table table-striped" [mfData]="datalist?.mainColor" #main="mfDataTable" [mfRowsOnPage]="5" (mfSelectedEntities)="setSelectedMainColor($event)">
+  <thead>
+    <tr>
+      <th>
+        <mfRowSelectorHead [mfTable]="main"></mfRowSelectorHead>
+      </th>
+      <th style="width: 40%">
+        <mfDefaultSorter by="colorName">Color Name</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">
+        <mfDefaultSorter by="hexValue">Hex Value</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">
+        <mfDefaultSorter by="className">Class Name</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">Swatch Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of main.data; let ndx = index">
+      <td>
+        <mfRowSelector [checkboxId]="ndx" [entity]="item" (selectEntity)="main.addRemoveSelectedEntity($event)"></mfRowSelector>
+      </td>
+      <td>{{item.colorName}}</td>
+      <td>{{item.hexValue}}</td>
+      <td>{{item.className}}</td>
+      <td [class] = item.className></td>
+    </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="5">
+      <div class="table-pagination">
+        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+      </div>
+    </td>
+  </tr>
+  </tfoot>
+</table>
+<h3>Sub Brand Colors</h3>
+<table *ngIf="datalist" class="table table-striped" [mfData]="datalist?.subColor" #sub="mfDataTable" [mfRowsOnPage]="5" (mfSelectedEntities)="setSelectedSubColor($event)">
+  <thead>
+    <tr>
+      <th>
+        <mfRowSelectorHead [mfTable]="sub"></mfRowSelectorHead>
+      </th>
+      <th style="width: 40%">
+        <mfDefaultSorter by="colorName">Color Name</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">
+        <mfDefaultSorter by="hexValue">Hex Value</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">
+        <mfDefaultSorter by="className">Class Name</mfDefaultSorter>
+      </th>
+      <th style="width: 20%">Swatch Sample</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sub.data; let ndx = index">
+      <td>
+        <mfRowSelector [entity]="item" [checkboxId] = "ndx" (selectEntity)="sub.addRemoveSelectedEntity($event)"></mfRowSelector>
+      </td>
+      <td>{{item.colorName}}</td>
+      <td>{{item.hexValue}}</td>
+      <td>{{item.className}}</td>
+      <td [class] = item.className></td>
+    </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="5">
+      <div class="table-pagination">
+        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+      </div>
+    </td>
+  </tr>
+  </tfoot>
+</table>
+<button class="btn btn-dbs-solid" type="submit" (click)="getColors($event)">Submit</button>
+<br><br>
+<code>
+<strong>HTML:</strong><br>
+&lt;table class="table table-striped" [mfData]="datalist?.mainColor" #main="mfDataTable" [mfRowsOnPage]="5" (mfSelectedEntities)="setSelectedMainColor($event)"&gt;<br>
+&nbsp; &nbsp; &lt;thead&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfRowSelectorHead [mfTable]="main"&gt;&lt;/mfRowSelectorHead&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th style="width: 40%"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfDefaultSorter by="colorName"&gt;Color Name&lt;/mfDefaultSorter&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th style="width: 20%"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfDefaultSorter by="hexValue"&gt;Hex Value&lt;/mfDefaultSorter&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th style="width: 20%"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfDefaultSorter by="className"&gt;Class Name&lt;/mfDefaultSorter&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th style="width: 20%"&gt;Swatch Sample&lt;/th&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+&nbsp; &nbsp; &lt;/thead&gt;<br>
+&nbsp; &nbsp; &lt;tbody&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr *ngFor="let item of main.data; let ndx = index"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfRowSelector [checkboxId]="ndx" [selectedEntities]="main.selectedEntities" [entity]="item" (selectEntity)="main.addRemoveSelectedEntity($event)"&gt;&lt;/mfRowSelector&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;{{ '{' }}{{ '{' }}item.colorName{{ '}' }}{{ '}' }}&lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;{{ '{' }}{{ '{' }}item.hexValue{{ '}' }}{{ '}' }}&lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;{{ '{' }}{{ '{' }}item.className{{ '}' }}{{ '}' }}&lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td [class] = item.className&gt;&lt;/td&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br>
+&nbsp; &nbsp; &lt;/tbody&gt;<br>
+&nbsp; &nbsp; &lt;tfoot&gt;<br>
+&nbsp; &nbsp; &lt;tr&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan="5"&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"&gt;&lt;/mfBootstrapPaginator&gt;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;<br>
+&nbsp; &nbsp; &lt;/tr&gt;<br>
+&nbsp; &nbsp; &lt;/tfoot&gt;<br>
+&lt;/table&gt;<br>
+&lt;button type="submit" (click)="getColors($event)"*&gt;Submit&lt;/button*&gt;
+<br><br>
+<strong>JSON:</strong><br>
+{{ '{' }}<br>
+&nbsp; &nbsp; "mainColor" :<br>
+&nbsp; &nbsp; [<br>
+&nbsp; &nbsp; &nbsp; &nbsp; {{ '{' }}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "colorName":"DBS Red",<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "hexValue":"#cc0000",<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "className":"bg-dbsred"<br>
+&nbsp; &nbsp; &nbsp; &nbsp; {{ '}' }},<br>
+&nbsp; &nbsp; &nbsp; &nbsp; ...<br>
+&nbsp; &nbsp; ],<br>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>

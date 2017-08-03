@@ -1,0 +1,8 @@
+<div [class]="class">
+  <input #input class="form-input search-box" (blur)="blur()" (focus)="focus()" [(ngModel)]="searchString" (keyup)="search(searchString)" [required] type="text" maxlength="{{maxlength}}" id="tally-city" autocomplete="off" placeholder="{{placeholder}}"/><span class="select-arrow" (click)="focusInput()"></span>
+  <div class="selected-value" [innerHTML]="label" (click)="focusInput()"></div>
+  <div class="search-result-container"><div *ngFor="let item of validResult"
+    (mousedown)="select(item)" class="search-result" [innerHTML]="item.label">
+  </div></div>
+</div>
+<span class="error-msg">{{placeholder}}</span>

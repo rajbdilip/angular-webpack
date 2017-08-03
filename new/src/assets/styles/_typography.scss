@@ -1,0 +1,72 @@
+/*
+These are DBS Typography styles and should not be changed unless there is a change in branding guidelines.
+*/
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: $font-family;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: em(32);
+  font-weight: $font-weight-medium;
+  line-height: (32/32);
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: em(24);
+  font-weight: $font-weight-light;
+  line-height: (24/24);
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: em(16);
+  font-weight: $font-weight-bold;
+  line-height: (20/16);
+  margin-bottom: 32px;
+}
+
+h4 {
+  font-size: em(16);
+  font-weight: $font-weight-medium;
+  line-height: (20/16);
+  margin-bottom: 32px;
+}
+
+h5 {
+  font-size: em(14);
+  font-weight: $font-weight-bold;
+  line-height: (16/14);
+  margin-bottom: 32px;
+}
+
+h6 {
+  font-size: em(14);
+  font-weight: $font-weight-light;
+  line-height: (20/16);
+  margin-bottom: 32px;
+}
+
+p {
+  font-size: em(16);
+  line-height: (20/16);
+  margin: 0 0 32px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 0 0 32px;
+  background: $chrome;
+}
+
+code {
+  display: block;
+  border-top: 3px solid $chrome;
+  border-bottom: 1px dashed $silver;
+  padding: 24px 16px;
+  margin-bottom: 40px;
+  background: $canvas;
+}

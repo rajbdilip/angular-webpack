@@ -1,0 +1,374 @@
+/*
+These are input styles.
+*/
+#{$all-text-inputs} {
+  padding: 9px 15px;
+  border: $border-style;
+  background-color: $form-input-bg-color;
+  .success-tick {
+    display: none;
+  }
+  &.validate {
+    &.success, &.ng-valid {
+      border-color: $border-color-success;
+      + .error-msg + .success-tick {
+        display: inherit;
+        background-image: url('../images/svg/ic-password-ok.svg');
+        width: 12px;
+        height: 12px;
+        display: block;
+        top: 13px;
+        position: absolute;
+        right: 13px;
+      }
+    }
+
+    &:invalid, &.error {
+      border-color: $border-color-error;
+      + span.error-msg::before {
+        content: '';
+        background-image: url('../images/svg/ic-close.svg');
+        width: 12px;
+        height: 12px;
+        display: block;
+        top: 13px;
+        position: absolute;
+        right: 13px;
+      }
+      + span.error-msg {
+        display: inherit;
+        float: left;
+        left: 0;
+        width: auto;
+        top: 100%;
+        padding: 6px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    &:focus:invalid, &:focus.error {
+      border-color: $border-color-error;
+    }
+
+    &:focus.success {
+      border-color: $border-color-success;
+    }
+  }
+}
+
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+  border-color: $border-color-focus;
+  box-shadow: none;
+  outline: none;
+}
+
+#{$all-text-inputs-active} {
+  border: 1px solid $border-color-focus;
+}
+
+label {
+  font-size: em(14);
+  vertical-align: middle;
+  p {
+    display: inline-block;
+    width: 80%;
+    font-weight: $font-weight-light;
+    margin: 0;
+    strong {
+      font-size: em(16, 14);
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+  + label:before {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    vertical-align: top;
+    margin-top: 2px;
+  }
+}
+
+input[type="checkbox"] {
+  + label:before {
+    background-image: url("../images/checkbox_untick.png");
+  }
+  &:checked {
+    + label:before {
+      background-image: url("../images/checkbox_tick.png");
+    }
+  }
+}
+
+input[type="radio"] {
+  + label:before {
+    background-image: url("../images/radio_off.png");
+  }
+  &:checked {
+    + label:before {
+      background-image: url("../images/radio_on.png");
+    }
+  }
+}
+
+select {
+  border: $border-style;
+
+  &:focus {
+    border-color: $border-color-focus;
+  }
+}
+
+input[type="date"]:disabled {
+  background-image: url("../images/svg/ico-input-calendar-disabled.svg");
+  background-color: #f4f0ea;
+}
+
+textarea:disabled,
+input:disabled {
+  cursor: not-allowed;
+  background-color: #eee;
+
+  &:hover {
+    border-color: $border-color-focus;
+  }
+}
+
+.nric-input {
+  text-transform: uppercase;
+}
+
+.input-short {
+  width: $form-element-short-width;
+}
+
+.input-normal {
+  width: $form-element-normal-width;
+}
+
+.input-full, .input-max {
+  width: 100%;
+}
+
+.input-long {
+  width: $form-element-long-width;
+}
+
+.error-msg {
+  display: none;
+  color: $dbsred;
+
+  strong {
+    color: $rouge;
+  }
+}
+ button, input[type="button"] {
+  @include user-select(none);
+  font-size: em(16);
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  background: none;
+  &.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 16px;
+    height: 40px;
+    line-height: 1;
+    font-weight: $font-weight-light;
+    text-align: center;
+    border-radius: $border-radius;
+
+    &.btn-dbs-solid {
+      border-color: $rouge;
+      background-color: $dbsred;
+      color: $white;
+
+      &:hover {
+        background-color: $rouge;
+      }
+
+      &:disabled {
+        border-color: $disabled-color;
+        background: $disabled-color;
+        color: $chrome;
+      }
+    }
+
+    &.btn-dbs-line {
+      border: 1px solid $dbsred;
+      color: $dbsred;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $rouge;
+        color: $white;
+      }
+
+      &:disabled {
+        border-color: $disabled-color;
+        color: $chrome;
+      }
+    }
+
+    &.btn-dbs-text {
+      color: $dbsred;
+      text-decoration: none;
+
+      > i {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $rouge;
+      }
+      &:disabled {
+        text-decoration: none;
+        color: $chrome;
+      }
+    }
+
+    &.btn-dbs-link {
+      color: $dbsred;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+        color: $rouge;
+      }
+
+      &:disabled {
+        text-decoration: none;
+        color: $chrome;
+      }
+    }
+  }
+}
+
+.dbs-hint {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  margin: 0 32px;
+  color: $rainforest;
+  font-size: em(14);
+  line-height: 1.2;
+}
+
+.form-group-wrapper {
+  @include span-columns(9);
+  @include clearfix;
+}
+.form-padding {
+    padding-top: 8px;
+}
+.form-group {
+  @include display-context(table);
+  display: table;
+  width: 100%;
+  padding: 0 0 40px 0;
+  p {
+    margin-bottom: 16px;
+  }
+  .label {
+    @include span-columns(2 of 9, table);
+    padding: 8px 16px 8px 0;
+    vertical-align: top;
+    label {
+      font-weight: 600;
+    }
+  }
+  .input {
+    @include span-columns(7 of 9, table);
+    label {
+      font-size: em(16);
+    }
+    .sub-label {
+      font-size: em(14);
+      padding: 8px 0;
+      display: block;
+    }
+  }
+
+  .value {
+    padding: 8px 0;
+  }
+
+  .hint {
+    width: 200px;
+    float: right;
+  }
+}
+
+.form-group.half-shaded {
+  padding: 0;
+
+  .input {
+    background-color: $silver;
+  }
+
+  .label {
+    padding: 32px 0;
+  }
+
+  .input {
+    padding: 25px 10px;
+
+    &.allowChar {
+      padding: 10px 30px 0;
+      font-size: 14px;
+
+      ul {
+        margin: 0;
+
+        li {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+section.form-group {
+  margin-bottom: 10px;
+  padding: 32px;
+
+  .half-shaded {
+    .input {
+      background-color: transparent;
+    }
+  }
+
+  .form-group-item {
+    margin-bottom: 24px;
+  }
+
+  div:last-child {
+    margin-bottom: 0;
+  }
+}
+.characterCounter {
+  float: right;
+  text-align: right;
+  font-size: em(14);
+  color: $chrome;
+  right: 0;
+  padding: 6px 0;
+}
+    

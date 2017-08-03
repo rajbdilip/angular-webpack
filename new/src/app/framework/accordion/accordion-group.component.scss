@@ -1,0 +1,31 @@
+/* 
+  accordion.component.scss
+  Output: accordion.component.css
+  These are the styles for the default accordion component.
+*/
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+
+.panel {
+  @include clearfix;
+}
+.panel-heading {
+  @include clearfix;
+  position: relative;
+  border: $border-style;
+  background: $canvas;
+  cursor: pointer;
+  display: inline-block;
+  &.active-panel {
+    background: $dbsred;
+    color: $white;
+  }
+  span {
+    display: block;
+    padding: 6px 20px;
+  }
+}
+.panel-body {
+  padding: 20px;
+}

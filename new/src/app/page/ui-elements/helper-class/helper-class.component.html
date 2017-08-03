@@ -1,0 +1,48 @@
+<h1>Helper Class</h1>
+<h3>Floats</h3>
+<p>Use these classes to float an element left or right. !important is included to avoid specificity issues.</p>
+<code>
+<strong>HTML:</strong><br>
+&lt;div class=&quot;pull-left&quot;&gt;&lt;/div&gt;<br>
+&lt;div class=&quot;pull-right&quot;&gt;&lt;/div&gt;
+</code>
+
+<h3>Text Alignment</h3>
+<p>All text should be aligned left by default.<br>If it's specific to component, then define other text alignment in component styles.<br>Otherwise, use the classes below to align text in unique scenario.<br>!important is included to avoid specificity issues.</p>
+<div class="clearfix component-wrapper bg-canvas margin-bottom text-right">
+  <h4>Heading 3</h4>
+  <p>Dignissimos, aut labore corporis laborum illo facere officia!</p>
+</div>
+<div class="clearfix component-wrapper bg-canvas margin-bottom text-center">
+  <h4>Heading 3</h4>
+  <p>Dignissimos, aut labore corporis laborum illo facere officia!</p>
+</div>
+<code>
+<strong>HTML:</strong><br>
+&lt;div class=&quot;text-right&quot;&gt;Dignissimos, aut labore corporis laborum illo facere officia!&lt;/div&gt;<br>
+&lt;div class=&quot;text-center&quot;&gt;Dignissimos, aut labore corporis laborum illo facere officia!&lt;/div&gt;
+</code>
+
+<h3>Clearfix</h3>
+<p>Use this class to clear floats on an element.</p>
+<code>
+<strong>HTML:</strong><br>
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+</code>
+
+<h3>Background Colors</h3>
+<p>Use these classes to quickly add a background colour to your components.</p>
+<div class="clearfix">
+  <div class="swatch" *ngFor="let item of datalist?.mainColor">
+    <p><span [class] = item.className></span>{{item.colorName}}<br>.{{item.className}}</p>
+  </div>
+</div>
+<div class="bg-silver">
+  <p>This is a sample div with a silver background.</p>
+</div>
+<code>
+<strong>HTML:</strong><br>
+&lt;div class=&quot;component-class bg-silver&quot;&gt;<br>
+&nbsp; &nbsp;&lt;p&gt;This is a sample div with silver background.&lt;/p&gt;<br>
+&lt;/div&gt;
+</code>

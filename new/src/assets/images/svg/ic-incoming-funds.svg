@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="a" d="M0,16 L1,16 L1,20 L0,20 L0,16 Z M1,19 L18,19 L18,20 L1,20 L1,19 Z M18,16 L19,16 L19,20 L18,20 L18,16 Z"/>
+    <mask id="e" width="19" height="4" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <rect id="b" width="1" height="15" x="9"/>
+    <mask id="f" width="1" height="15" x="0" y="0" fill="white">
+      <use xlink:href="#b"/>
+    </mask>
+    <rect id="c" width="1" height="8" x="11.682" y="9.182"/>
+    <mask id="g" width="1" height="8" x="0" y="0" fill="white">
+      <use xlink:href="#c"/>
+    </mask>
+    <rect id="d" width="1" height="8" x="6.682" y="9.182"/>
+    <mask id="h" width="1" height="8" x="0" y="0" fill="white">
+      <use xlink:href="#d"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="#656565" stroke-width="2">
+    <use mask="url(#e)" xlink:href="#a"/>
+    <use mask="url(#f)" xlink:href="#b"/>
+    <use mask="url(#g)" transform="rotate(45 12.182 13.182)" xlink:href="#c"/>
+    <use mask="url(#h)" transform="rotate(-45 7.182 13.182)" xlink:href="#d"/>
+  </g>
+</svg>

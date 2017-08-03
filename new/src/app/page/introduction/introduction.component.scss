@@ -1,0 +1,42 @@
+// Layout for UI Elements
+
+@import "../../../assets/styles/settings";
+
+aside {
+  float: left;
+  width: percentage(304/$content-width);
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  h3 {
+    padding: 0 percentage(16/304);
+  }
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $canvas;
+    li {
+      margin: 0;
+    }
+    li a {
+      display: block;
+      padding: 10px percentage(16/304);
+      &.active {
+        background: $silver;
+        text-decoration: underline;
+      }
+    }
+    li li a {
+      background: $canvas;
+      padding: 10px 20px;
+    }
+  }
+}
+
+article {
+  float: left;
+  width: percentage(624/$content-width);
+  padding: 64px percentage(16/624);
+}

@@ -1,0 +1,101 @@
+<h1>CSS/SCSS Coding Styleguide</h1>
+<p>We are using SCSS to manage and compile our CSS. This document serves as a guideline to keep formatting of SCSS files consistent. General rules include:</p>
+<ol>
+  <li>Be consistant with indentation</li>
+  <li>Be consistant about where spaces before/after colons/braces go</li>
+  <li>One selector per line, One rule per line</li>
+  <li>List related properties together</li>
+  <li>Don't use ID's #idname</li>
+  <li>Use logical class names</li>
+</ol>
+<h2>Formatting Guidelines</h2>
+<h3>List @extend(s) First</h3>
+<code>
+.button-red {{ '{' }}<br>
+&nbsp; &nbsp; <span class="code-highlight-green">@extend %button;</span><br>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>
+<h3>List @include(s) Next</h3>
+<code>
+.button-red {{ '{' }}<br>
+&nbsp; &nbsp; @extend %button;<br>
+&nbsp; &nbsp; <span class="code-highlight-green">@include clearfix;</span><br>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>
+<h3>List "Regular" Styles Next</h3>
+<code>
+.button-red {{ '{' }}<br>
+&nbsp; &nbsp; @extend %button;<br>
+&nbsp; &nbsp; @include clearfix;<br>
+&nbsp; &nbsp; <span class="code-highlight-green">background: $dbsred;</span><br>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>
+<h3>Nested Pseudo Classes and Pseudo Elements Next</h3>
+<code>
+.button-red {{ '{' }}<br>
+&nbsp; &nbsp; @extend %button;<br>
+&nbsp; &nbsp; @include clearfix;<br>
+&nbsp; &nbsp; background: $dbsred;<br>
+<span class="code-highlight-green">
+  &nbsp; &nbsp; &amp;:hover {{ '{' }}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; background: $dbsred;<br>
+  &nbsp; &nbsp; {{ '}' }}<br>
+  &nbsp; &nbsp; &amp;::before {{ '{' }}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; content: "";<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; display: block;<br>
+  &nbsp; &nbsp; {{ '}' }}<br>
+</span>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>
+<h3>Nested Selectors Last</h3>
+<code>
+.button-red {{ '{' }}<br>
+&nbsp; &nbsp; @extend %button;<br>
+&nbsp; &nbsp; @include clearfix;<br>
+&nbsp; &nbsp; background: $dbsred;<br>
+&nbsp; &nbsp; &amp;:hover {{ '{' }}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; background: $dbsred;<br>
+&nbsp; &nbsp; {{ '}' }}<br>
+&nbsp; &nbsp; &amp;::before {{ '{' }}<br>
+&nbsp; &nbsp; &nbsp; &nbsp; content: "";<br>
+&nbsp; &nbsp; &nbsp; &nbsp; display: block;<br>
+&nbsp; &nbsp; {{ '}' }}<br>
+<span class="code-highlight-green">
+  &nbsp; &nbsp; > h3 {{ '{' }}<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; @include transform(rotate(90deg));<br>
+  &nbsp; &nbsp; &nbsp; &nbsp; border-bottom: 1px solid white;<br>
+  &nbsp; &nbsp; {{ '}' }}<br>
+</span>
+&nbsp; &nbsp; ...<br>
+{{ '}' }}
+</code>
+<h2>Syntax Formatting</h2>
+<h3>Lowercase Writing</h3>
+<p>This includes:</p>
+<ul>
+  <li>all selectors: .classname</li>
+  <li>hex codes: #fff;</li>
+</ul>
+<h3>Shorthand Values</h3>
+<p>Use shorthand values where possible</p>
+<code>
+<span class="code-highlight-green">color: #fff;</span><br>
+instead of<br>
+<span class="code-highlight-red">color: #ffffff;</span>
+<br><br>
+<span class="code-highlight-green">margin: 10px 5px;</span><br>
+instead of<br>
+<span class="code-highlight-red">color: 10px 5px 10px 5px;</span>
+</code>
+<h3>Line Height</h3>
+<p>Define line-height in decimal without any units</p>
+<code>
+<p>For example, if the body font is 16px with 20px line-height, then the line-height should be defined as:</p>
+<span class="code-highlight-green">line-height: 1.25;</span><br>
+instead of<br>
+<span class="code-highlight-red">line-height: 20px;</span>
+</code>

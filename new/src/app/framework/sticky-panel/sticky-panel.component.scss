@@ -1,0 +1,30 @@
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+:host {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sticky-panel {
+  position: relative;
+  width: 224px;
+  padding: 20px 15px;
+  border-radius: 4px;
+  background-color: $nero;
+  color: $white;
+  font-size: em(14);
+  font-weight: 100;
+
+  &.sticky {
+    position: fixed;
+    top: 20px;
+  }
+  .arrow-left {
+    @include triangle(16px, $nero, left);
+    position: absolute;
+    left: -8px;
+    top: 36px;
+  }
+}

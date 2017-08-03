@@ -1,0 +1,15 @@
+/* 
+  css-styleguide.component.scss
+  Output: css-styleguide.component.css
+  These are styles used only for css styleguide page component.
+*/
+@import "../../../../assets/styles/settings";
+
+code {
+  .code-highlight-red {
+    color: $dbsred;
+  }
+  .code-highlight-green {
+    color: #00ad3f;
+  }
+}

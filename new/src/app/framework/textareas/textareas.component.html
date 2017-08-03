@@ -1,0 +1,28 @@
+<div [class]="class">
+      <textarea #textarea
+            [class]="inputClass"
+            [attr.aria-label]="ariaLabel"
+            [attr.aria-labelledby]="ariaLabelledBy"
+            [attr.aria-disabled]="ariaDisabled"
+            [attr.aria-required]="ariaRequired"
+            [autofocus]="autofocus"
+            [disabled]="disabled"
+            [cols]="cols"
+            [rows]="rows"
+            [id]="inputId"
+            [attr.list]="list"
+            [attr.maxlength]="maxlength"
+            [readonly]="readonly"
+            [required]="required"
+            [attr.tabindex]="tabindex"
+            [placeholder]="placeholder"
+            [attr.name]="name"
+            (focus)="_handleFocus($event)"
+            (blur)="_handleBlur($event)"
+            (change)="_handleChange($event)"
+            [(ngModel)]="value">
+      </textarea>
+      <span [innerHTML]="_errorMsg" class="error-msg"></span>
+      <span class="success-tick"></span>
+      <div *ngIf="maxlength" class="characterCounter">{{characterLeftCount}}</div>
+</div>

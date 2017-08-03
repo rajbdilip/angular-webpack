@@ -1,0 +1,15 @@
+/*
+These are layout styles specific to the styleguide.
+*/
+a {
+  color: $nero;
+  text-decoration: underline;
+  &.red-link {
+    text-decoration: none;
+    color: $dbsred;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: $rouge;
+  }
+}

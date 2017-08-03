@@ -1,0 +1,115 @@
+/*
+  Icons
+*/
+*[class^='icon-'],
+*[class*='icon-'] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+}
+// Core Icons
+.icon-search {
+  background-image: url('../images/svg/ic-search.svg');
+}
+.icon-filter {
+  background-image: url('../images/svg/ic-filter.svg');
+}
+.icon-calendar {
+  background-image: url('../images/svg/ic-calendar.svg');
+}
+.icon-tip {
+  background-image: url('../images/svg/ic-tip.svg');
+}
+.icon-pending {
+  background-image: url('../images/svg/ic-pending.svg');
+}
+.icon-favourite {
+  background-image: url('../images/svg/ic-favourite.svg');
+}
+.icon-outgoing-funds {
+  background-image: url('../images/svg/ic-outgoing-funds.svg');
+}
+.icon-incoming-funds {
+  background-image: url('../images/svg/ic-incoming-funds.svg');
+}
+.icon-mail {
+  background-image: url('../images/svg/ic-mail.svg');
+}
+.icon-cheque {
+  background-image: url('../images/svg/ic-cheque.svg');
+}
+// Status
+.icon-information {
+  background-image: url('../images/svg/ic-information.svg');
+}
+.icon-alert {
+  background-image: url('../images/svg/ic-alert.svg');
+}
+.icon-confirmation {
+  background-image: url('../images/svg/ic-confirmation.svg');
+}
+.icon-favourite-active {
+  background-image: url('../images/svg/ic-favourite-active.svg');
+}
+.icon-step-indicator-1 {
+  background-image: url('../images/svg/ic-step-indicator-1.svg');
+}
+.icon-notification {
+  background-image: url('../images/svg/ic-notification.svg');
+}
+// .icon-dropdown-collapsed {
+//   background-image: url('../images/svg/ic-dropdown-collapsed.svg');
+// }
+// .icon-dropdown-open {
+//   background-image: url('../images/svg/ic-dropdown-open.svg');
+// }
+.icon-password-ok {
+  background-image: url('../images/svg/ic-password-ok.svg');
+}
+// .icon-selected-item {
+//   background-image: url('../images/svg/ic-selected-item.svg');
+// }
+.icon-country-us {
+  background-image: url('../images/svg/ic-country-america.svg');
+}
+.icon-country-au {
+  background-image: url('../images/svg/ic-country-australia.svg');
+}
+.icon-country-sg {
+  background-image: url('../images/svg/ic-country-singapore.svg');
+}
+// Action Icons
+.icon-print {
+  background-image: url('../images/svg/ic-print.svg');
+}
+.icon-delete {
+  background-image: url('../images/svg/ic-delete.svg');
+}
+.icon-edit {
+  background-image: url('../images/svg/ic-edit.svg');
+}
+.icon-expand {
+  background-image: url('../images/svg/ic-expand.svg');
+}
+.icon-collapse {
+  background-image: url('../images/svg/ic-collapse.svg');
+}
+.icon-close {
+  background-image: url('../images/svg/ic-close.svg');
+}
+.icon-chevron-up {
+  background-image: url('../images/svg/ic-chevron-up.svg');
+}
+.icon-chevron-right {
+  background-image: url('../images/svg/ic-chevron-right.svg');
+}
+.icon-chevron-down {
+  background-image: url('../images/svg/ic-chevron-down.svg');
+}
+.icon-chevron-left {
+  background-image: url('../images/svg/ic-chevron-left.svg');
+}

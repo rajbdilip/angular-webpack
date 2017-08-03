@@ -1,0 +1,13 @@
+<h1>Colors</h1>
+<h3>Main Brand</h3>
+<div class="clearfix">
+  <div class="swatch" *ngFor="let item of datalist?.mainColor">
+    <p><span [class] = item.className></span>{{item.colorName}}<br>{{item.hexValue}}</p>
+  </div>
+</div>
+<h3>Sub Brand</h3>
+<div class="clearfix">
+  <div class="swatch" *ngFor="let item of datalist?.subColor">
+    <p><span [class] = item.className></span>{{item.colorName}}<br>{{item.hexValue}}</p>
+  </div>
+</div>

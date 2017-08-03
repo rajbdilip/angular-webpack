@@ -1,0 +1,42 @@
+/* 
+  tabs.component.scss
+  Output: tabs.component.css
+  This is tabs component to toggle between content.
+*/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.tabs-nav::after,
+.tabs-content::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.tabs-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #979797; }
+  .tabs-nav li {
+    display: inline-block;
+    margin: 0; }
+    .tabs-nav li span {
+      display: inline-block;
+      cursor: pointer;
+      border-top: 1px solid #979797;
+      border-left: 1px solid #979797;
+      padding: 5px 14px;
+      color: #c00; }
+    .tabs-nav li:last-child span {
+      border-right: 1px solid #979797; }
+  .tabs-nav li.active span,
+  .tabs-nav li:hover span {
+    background: #c00;
+    color: #fff; }
+
+.tabs-content {
+  padding: 20px 0; }

@@ -1,0 +1,16 @@
+/* 
+  tabs.component.scss
+  Output: tabs.component.css
+  This is tabs component to toggle between content.
+*/
+
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+div {
+  position: relative;
+  display: inline-block;
+}
+input {
+  width: 100%;
+}

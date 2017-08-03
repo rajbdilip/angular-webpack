@@ -1,0 +1,43 @@
+.clearfix {
+  @include clearfix;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+/* Text Alignment
+    All text should be aligned left by default.
+    If it's specific to component, then define other text alignment in component styles.
+    Otherwise, use the classes below to align text in unique scenario.
+*/
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Margins
+    All margins should be defined within the wrapper/component styles.
+    Use these default margins for unique scenarios
+*/
+.margin-top {
+  margin-top: 24px !important;
+}
+
+.margin-bottom {
+  margin-bottom: 24px !important;
+}
+
+/* Remove padding
+    Remove all padding from a component wrapper
+*/
+.no-padding {
+  padding: 0 !important;
+}

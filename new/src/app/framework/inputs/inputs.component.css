@@ -1,0 +1,33 @@
+/* 
+  tabs.component.scss
+  Output: tabs.component.css
+  This is tabs component to toggle between content.
+*/
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+div {
+  position: relative;
+  display: inline-block; }
+
+input {
+  width: 100%; }
+
+.characterCounter {
+  text-align: right;
+  font-size: 0.875em;
+  color: #999494;
+  width: 100%;
+}
+
+.error-msg {
+  position: absolute;
+  left: 100%;
+  width: auto;
+  top: 0;
+  padding: 6px 10px;
+  overflow: hidden;
+  white-space: nowrap; }

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <rect id="a" width="7" height="4" x="5"/>
+    <mask id="g" width="7" height="4" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <polygon id="b" points="2 7 15 7 14.071 20 2.929 20"/>
+    <mask id="h" width="13" height="13" x="0" y="0" fill="white">
+      <use xlink:href="#b"/>
+    </mask>
+    <rect id="c" width="1" height="9" x="8" y="9" rx=".5"/>
+    <mask id="i" width="1" height="9" x="0" y="0" fill="white">
+      <use xlink:href="#c"/>
+    </mask>
+    <rect id="d" width="1" height="9" x="11" y="9" rx=".5"/>
+    <mask id="j" width="1" height="9" x="0" y="0" fill="white">
+      <use xlink:href="#d"/>
+    </mask>
+    <rect id="e" width="1" height="9" x="5" y="9" rx=".5"/>
+    <mask id="k" width="1" height="9" x="0" y="0" fill="white">
+      <use xlink:href="#e"/>
+    </mask>
+    <rect id="f" width="17" height="3" y="3"/>
+    <mask id="l" width="17" height="3" x="0" y="0" fill="white">
+      <use xlink:href="#f"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke-width="2">
+    <use fill="#FFFFFF" stroke="#FF3333" mask="url(#g)" xlink:href="#a"/>
+    <use fill="#FF3333" stroke="#FF3333" mask="url(#h)" xlink:href="#b"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#i)" xlink:href="#c"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#j)" xlink:href="#d"/>
+    <use fill="#FFFFFF" stroke="#FFFFFF" mask="url(#k)" xlink:href="#e"/>
+    <use fill="#FF3333" stroke="#FF3333" mask="url(#l)" xlink:href="#f"/>
+  </g>
+</svg>

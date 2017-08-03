@@ -1,0 +1,143 @@
+{
+  "dbsCurrencies": [{
+    "code": "SGD",
+    "flag": "sg",
+    "info": "SG Dollar",
+    "dbsIcon": "sgdollar_flg.gif"
+  }, {
+    "code": "USD",
+    "flag": "us",
+    "info": "US Dollar",
+    "dbsIcon": "usdollar_flg.gif"
+  }, {
+    "code": "EUR",
+    "flag": "eu",
+    "info": "Euro",
+    "dbsIcon": "euro_flg.gif"
+  }, {
+    "code": "GBP",
+    "flag": "gb",
+    "info": "Sterling Pound",
+    "dbsIcon": "sterlingpound_flg.gif"
+  }, {
+    "code": "AUD",
+    "flag": "au",
+    "info": "Australian Dollar",
+    "dbsIcon": "australiandollar_flg.gif"
+  }, {
+    "code": "CAD",
+    "flag": "ca",
+    "info": "Canadian Dollar",
+    "dbsIcon": "canadiandollar_flg.gif"
+  }, {
+    "code": "NZD",
+    "flag": "nz",
+    "info": "New Zealand Dollar",
+    "dbsIcon": "newzealanddollar_flg.gif"
+  }, {
+    "code": "DKK",
+    "flag": "dk",
+    "info": "Danish Kroner",
+    "dbsIcon": "danishkroner_flg.gif"
+  }, {
+    "code": "HKD",
+    "flag": "hk",
+    "info": "Hong Kong Dollar",
+    "dbsIcon": "hongkongdollar_flg.gif"
+  }, {
+    "code": "NOK",
+    "flag": "no",
+    "info": "Norwegian Kroner",
+    "dbsIcon": "norwegiankroner_flg.gif"
+  }, {
+    "code": "SEK",
+    "flag": "se",
+    "info": "Swedish Kroner",
+    "dbsIcon": "swedishkroner_flg.gif"
+  }, {
+    "code": "CHF",
+    "flag": "ch",
+    "info": "Swiss Franc",
+    "dbsIcon": "swissfranc_flg.gif"
+  }, {
+    "code": "AED",
+    "flag": "ae",
+    "info": "UAE Dirham",
+    "dbsIcon": "uaedirham_flg.gif"
+  }, {
+    "code": "TRY",
+    "flag": "tr",
+    "info": "Turkish Lira",
+    "dbsIcon": "turkishlira_flg.gif"
+  }, {
+    "code": "JPY",
+    "flag": "jp",
+    "info": "Japanese Yen",
+    "dbsIcon": "japaneseyen_flg.gif"
+  }, {
+    "code": "THB",
+    "flag": "th",
+    "info": "Thai Baht",
+    "dbsIcon": "thaibaht_flg.gif"
+  }, {
+    "code": "IDR",
+    "flag": "id",
+    "info": "Indonesian Rupiah",
+    "dbsIcon": "indonesianrupiah_flg.gif"
+  }, {
+    "code": "RUB",
+    "flag": "ru",
+    "info": "Russian Ruble",
+    "dbsIcon": "russianruble_flg.gif"
+  }, {
+    "code": "MXN",
+    "flag": "mx",
+    "info": "Mexican Peso",
+    "dbsIcon": "mexicanpeso_flg.gif"
+  }, {
+    "code": "BND",
+    "flag": "bn",
+    "info": "Brunei Dollar",
+    "dbsIcon": "bruneidollar_flg.gif"
+  }, {
+    "code": "ZAR",
+    "flag": "za",
+    "info": "South African Rand",
+    "dbsIcon": "southafricanrand_flg.gif"
+  }, {
+    "code": "CNY",
+    "flag": "cn",
+    "info": "Chinese Renminbi",
+    "dbsIcon": "chineserenminbi_flg.gif"
+  }, {
+    "code": "INR",
+    "flag": "in",
+    "info": "Indian Rupee",
+    "dbsIcon": "indianrupee_flg.gif"
+  }, {
+    "code": "KRW",
+    "flag": "kr",
+    "info": "Korean Won",
+    "dbsIcon": "koreanwon_flg.gif"
+  }, {
+    "code": "LKR",
+    "flag": "lk",
+    "info": "Sri Lanka Rupee",
+    "dbsIcon": "srilankarupee_flg.gif"
+  }, {
+    "code": "PHP",
+    "flag": "ph",
+    "info": "Philippine Peso",
+    "dbsIcon": "philippinepeso_flg.gif"
+  }, {
+    "code": "TWD",
+    "flag": "tw",
+    "info": "New Taiwan Dollar",
+    "dbsIcon": "newtaiwandollar_flg.gif"
+  }, {
+    "code": "SAR",
+    "flag": "sa",
+    "info": "Saudi Rial",
+    "dbsIcon": "saudirial_flg.gif"
+  }]
+}

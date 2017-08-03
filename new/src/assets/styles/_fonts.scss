@@ -1,0 +1,3 @@
+@include font-face("FrutigerNextPro", "../fonts/FrutigerNextPro-Light", 400, normal, $asset-pipeline, eot woff ttf svg);
+@include font-face("FrutigerNextPro", "../fonts/FrutigerNextPro-Medium", 500, $asset-pipeline, eot woff ttf svg);
+@include font-face("FrutigerNextPro", "../fonts/FrutigerNextPro-Bold", 600, $asset-pipeline, eot woff ttf svg);

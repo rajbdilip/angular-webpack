@@ -1,0 +1,17 @@
+/* 
+  tabs.component.scss
+  Output: tabs.component.css
+  This is tabs component to toggle between content.
+*/
+
+@import "../../../assets/styles/settings";
+@import "bourbon";
+@import "neat";
+div {
+  position: relative;
+  display: inline-block;
+}
+textarea {
+  width: 100%;
+  height: 96px;
+}

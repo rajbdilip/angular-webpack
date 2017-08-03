@@ -1,0 +1,188 @@
+sticky-panel {
+  h1, h3 {
+    margin-top: 0;
+    font-weight: 400;
+  }
+  h3 {
+    margin-bottom: 4px;
+    font-size: em(12);
+  }
+  .summary-section {
+    padding-top: 15px;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #979797;
+    overflow: auto;
+    .note {
+      font-size: em(12);
+      color: $white;
+      margin-top: 4px;
+    }
+  }
+  .discount {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+  }
+  .cost {
+    width: 52px;
+  }
+  .totalCost {
+    font-size: em(16);
+  }
+}
+accordion-component {
+  display: inline-block;
+}
+accordion-component.custom-accordion {
+  .panel-heading {
+    position: relative;
+    background: transparent;
+    border: 0;
+    &.active-panel {
+      background: transparent;
+      color: $nero;
+    }
+    input[type="radio"] {
+      position: absolute;
+      top: 9px;
+      left: 20px;
+    }
+    label {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .collapse {
+    &.in {
+      .tooltip {
+        opacity: 1;
+        height: auto;
+        max-height: 999px;
+        @include transition(opacity .3s ease-out, max-height .3s ease-in-out);
+      }
+    }
+    .tooltip {
+      opacity: 0;
+      height: 0;
+      max-height: 0;
+      @include transition(opacity .3s ease-out, max-height .3s ease-in-out);
+    }
+  }
+  .panel-body {
+    padding: 0;
+  }
+}
+.tooltip {
+  position: relative;
+  display: block;
+  background-color: $charcoal;
+  color: $white;
+  padding: 16px 16px 16px 40px;
+  border-radius: 4px;
+  margin-top: 9px;
+  margin-bottom: 0;
+  width: 300px;
+  line-height: 16px;
+  font-size: em(14);
+  font-weight: 400;
+  &.error {
+    padding: 16px;
+    color: $dbsred;
+    background-color: rgba($dbsred, 0.1);
+  }
+  &.error:after {
+    border-bottom: 8px solid rgba($dbsred, 0.1);
+  }
+  p {
+    margin-top: 3px;
+    margin-bottom: 8px;
+  }
+}
+.tooltip:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid $charcoal;
+}
+date-picker {
+  span[class^='icon-'],
+  span[class*='icon-'] {
+    width: 14px;
+    height: 14px;
+  }
+  datepicker-inner {
+    position: absolute;
+    padding: 4px;
+    background: $white;
+    z-index: 10;
+    border: 1px solid $chrome;
+  }
+  day-picker,
+  month-picker,
+  year-picker {
+    &:focus {
+      border: none;
+      outline: 0;
+    }
+  }
+  .full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+  table {
+    width: 100%;
+    margin: 0;
+    thead {
+      border: 0;
+      tr {
+        cursor: pointer;
+        th {
+          border: 0;
+        }
+      }
+    }
+    td {
+      padding: 0;
+      border: 0;
+    }
+  }
+  month-picker,
+  year-picker {
+    td {
+      padding: 4px;
+    }
+  }
+  button {
+    &.btn {
+      padding: 2px;
+      outline: none;
+      height: 32px;
+      line-height: 1;
+      border-radius: 0;
+      color: $nero;
+      font-size: em(14, 16);
+    }
+    &:hover {
+      background-color: $silver;
+    }
+    &.active {
+      background-color: $dbsred;
+      color: $white;
+    }
+    &.disabled {
+      color: $chrome;
+    }
+  }
+}

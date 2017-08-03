@@ -1,0 +1,99 @@
+
+  {
+    "mainColor" :
+    [
+      {
+        "colorName":"DBS Red",
+        "hexValue":"#ff3333",
+        "className":"bg-dbsred"
+      },
+      {
+        "colorName":"Rouge",
+        "hexValue":"#ee1818",
+        "className":"bg-rouge"
+      },
+      {
+        "colorName":"Nero",
+        "hexValue":"#000000",
+        "className":"bg-nero"
+      },
+      {
+        "colorName":"Charcoal",
+        "hexValue":"#333333",
+        "className":"bg-charcoal"
+      },
+      {
+        "colorName":"Storm",
+        "hexValue":"#656565",
+        "className":"bg-storm"
+      },
+      {
+        "colorName":"Chrome",
+        "hexValue":"#b3b3b3",
+        "className":"bg-chrome"
+      },
+      {
+        "colorName":"Silver",
+        "hexValue":"#e5e5e5",
+        "className":"bg-silver"
+      },
+      {
+        "colorName":"Canvas",
+        "hexValue":"#f7f7f7",
+        "className":"bg-canvas"
+      },
+      {
+        "colorName":"White",
+        "hexValue":"#ffffff",
+        "className":"bg-white"
+      },
+      {
+        "colorName":"Marine",
+        "hexValue":"#255770",
+        "className":"bg-marine"
+      },
+      {
+        "colorName":"Rainforest",
+        "hexValue":"#176A17",
+        "className":"bg-rainforest"
+      },
+      {
+        "colorName":"Pine",
+        "hexValue":"#119A2E",
+        "className":"bg-pine"
+      },
+      {
+        "colorName":"Sunshine",
+        "hexValue":"#ffaa22",
+        "className":"bg-sunshine"
+      }
+    ],
+    "subColor" :
+    [
+      {
+        "colorName":"Treasures Gold",
+        "hexValue":"#ba8c58",
+        "className":"bg-treasuresgold"
+      },
+      {
+        "colorName":"TPC Platinum",
+        "hexValue":"#a2a2a4",
+        "className":"bg-tpcplatinum"
+      },
+      {
+        "colorName":"PBP Platinum",
+        "hexValue":"#6c6f70",
+        "className":"bg-pbplatinum"
+      },
+      {
+        "colorName":"POSB Blue",
+        "hexValue":"#1585c7",
+        "className":"bg-posbblue"
+      },
+      {
+        "colorName":"POSB Yellow",
+        "hexValue":"#feb40f",
+        "className":"bg-posbyellow"
+      }
+    ]
+  }

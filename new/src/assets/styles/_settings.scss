@@ -1,0 +1,65 @@
+// This file contains all the global variables used.
+// These are DbS branding variables and should not be changed unless there is a change in branding guidelines.
+
+// Grid
+$max-width: 1024;
+$content-width: 944;
+$min-margin: 40;
+
+// Colors - Main Brand
+
+$dbsred: #f33;
+$rouge: #ee1818;
+
+$nero: #000;
+$charcoal: #333;
+$storm: #656565;
+$chrome: #b3b3b3;
+$silver: #e5e5e5;
+$canvas: #f7f7f7;
+$white: #fff;
+
+$marine: #255770;
+$rainforest: #176A17;
+$pine: #119a2e;
+$sunshine: #fa2;
+
+// Colors - Sub Brand
+$treasuresgold: #ba8c58;
+$tpcplatinum: #a2a2a4;
+$pbplatinum: #6c6f70;
+$posbblue: #1585c7;
+$posbyellow: #feb40f;
+
+// Font
+$font-family: 'FrutigerNextPro', Arial, Helvetica, sans-serif;
+$font-weight-bold: 600;
+$font-weight-medium: 500;
+$font-weight-light: 400;
+$em-base: 16px !default;
+$font-size: $em-base;
+
+$line-height: (20/14);
+
+// Border
+$border-color: $silver;
+$border-style: 1px solid $border-color;
+$border-radius: 4px;
+
+// Form Settings
+$border-color-success: $pine;
+$border-color-error: $rouge;
+$border-color-focus: #aac9d9;
+$form-text-box-height: 40px;
+$form-padding: 10 !default;
+$border-width: 1px;
+$form-element-short-width: 140px;
+$form-element-normal-width: 302px;
+$form-element-long-width: 540px;
+$form-input-bg-color: #fff;
+$input-padding: $form-padding;
+
+// Buttons
+$primary-border: 1px solid $rouge;
+$secondary-border: 1px solid $dbsred;
+$disabled-color: #ececec;
